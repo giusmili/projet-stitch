@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>LGC-jeunesse - Un cadre pour grandir et s'épanouir</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    >
+    <script src="js/app.js"></script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#222222] dark:text-gray-200"
+  >
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:text-black focus:p-2 focus:rounded">Aller au contenu principal</a>
+    <div
+      class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="w-full flex justify-center sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm"
+        >
+          <div
+            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200/80 dark:border-gray-700/80 px-4 sm:px-10 py-3 w-full max-w-6xl"
+          >
+            <div class="flex items-center gap-4">
+              <div class="size-8 text-primary">
+                <svg
+                  fill="none"
+                  viewbox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true" focusable="false"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h2
+                class="text-lg font-bold tracking-[-0.015em] text-[#222222] dark:text-white"
+              >
+                LGC-jeunesse
+              </h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-8 items-center">
+              <nav class="hidden md:flex items-center gap-9" aria-label="Navigation principale">
+                <ul class="flex items-center gap-9">
+                  <li>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
+                  </li>
+                  <li>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">&Agrave; Propos</a>
+                  </li>
+                  <li>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+                  </li>
+                </ul>
+              </nav>
+              <button type="button" aria-label="Nous contacter"
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+              >
+                <span class="truncate">Contactez-nous</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <main id="main-content" class="flex-1">
+          <section
+            class="flex flex-col items-center px-4 sm:px-10 py-10 sm:py-20"
+            aria-labelledby="hero-title"
+          >
+            <div class="w-full max-w-6xl @container">
+              <div class="@[480px]:p-4">
+                <div
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4 text-center"
+                  aria-hidden="true"
+                  style="
+                    background-image: linear-gradient(
+                        rgba(0, 0, 0, 0.1) 0%,
+                        rgba(0, 0, 0, 0.4) 100%
+                      ),
+                      url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHbD407LxL6ARz9fIIyrDAe_3GnyoJTZ4pIBt3T2t568fGR0HkXFkI-hpwoi6dWI631LjsGDI-sgcACAAuaXGetXFs1loSF_6G1MRD95syY9uJNQ-omQVKr-P1aaVZR3QHOZgxNPQXzugVVN_S_MgRNyNL_6y-WfZZATL2NMqkpHDVhHwdpL-AZm9iaMqARHUezZ8f6TG6a8HnFbTy2FIdAZX-1prHRBdyve99f3vGwtEnSp_1rJMJ9z7xpnBc_6WVu5EPJ1jHZkPs');
+                  "
+                >
+                  <div class="flex flex-col gap-2">
+                    <h1 id="hero-title"
+                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                    >
+                      Un cadre pour grandir et s'&eacute;panouir
+                    </h1>
+                    <p
+                      class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal max-w-xl mx-auto"
+                    >
+                      D&eacute;couvrez un environnement bienveillant et stimulant pour
+                      le d&eacute;veloppement de votre enfant.
+                    </p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-primary/90 transition-colors"
+                  >
+                    <span class="truncate">D&eacute;couvrir nos services</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="flex flex-col items-center px-4 sm:px-10 py-10 sm:py-16"
+          >
+            <div class="flex flex-col gap-6 w-full max-w-4xl">
+              <div class="text-center">
+                <h2
+                  class="text-[#222222] dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]"
+                >
+                  Notre Service Petite Enfance
+                </h2>
+              </div>
+              <p
+                class="text-center text-base font-normal leading-relaxed text-[#222222] dark:text-gray-300 max-w-3xl mx-auto"
+              >
+                Chez LGC-jeunesse, nous nous engageons à offrir une approche
+                éducative unique, centrée sur le bien-être et l'éveil de chaque
+                enfant. Nous croyons en une pédagogie qui respecte le rythme
+                individuel et encourage la découverte.
+              </p>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8"
+              >
+                <article
+                  class="flex flex-col gap-3 rounded-lg border border-gray-200/80 dark:border-gray-700/80 bg-background-light dark:bg-background-dark p-6"
+                  aria-labelledby="feature-pedagogie-active"
+                >
+                  <div class="text-primary">
+                    <span class="material-symbols-outlined !text-4xl" aria-hidden="true"
+                      >lightbulb</span
+                    >
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h3 id="feature-pedagogie-active"
+                      class="text-[#222222] dark:text-white text-lg font-bold leading-tight"
+                    >
+                      P&eacute;dagogie Active
+                    </h3>
+                    <p
+                      class="text-[#222222]/80 dark:text-gray-400 text-sm font-normal leading-normal"
+                    >
+                      Nous encourageons l'apprentissage par le jeu et
+                      l'exp&eacute;rimentation pour stimuler la curiosit&eacute; naturelle des
+                      enfants.
+                    </p>
+                  </div>
+                </article>
+                <article
+                  class="flex flex-col gap-3 rounded-lg border border-gray-200/80 dark:border-gray-700/80 bg-background-light dark:bg-background-dark p-6"
+                  aria-labelledby="feature-environnement-securise"
+                >
+                  <div class="text-primary">
+                    <span class="material-symbols-outlined !text-4xl" aria-hidden="true"
+                      >shield</span
+                    >
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h3 id="feature-environnement-securise"
+                      class="text-[#222222] dark:text-white text-lg font-bold leading-tight"
+                    >
+                      Environnement S&eacute;curis&eacute;
+                    </h3>
+                    <p
+                      class="text-[#222222]/80 dark:text-gray-400 text-sm font-normal leading-normal"
+                    >
+                      Nos locaux sont con&ccedil;us pour garantir la s&eacute;curit&eacute; et le
+                      confort, permettant une exploration en toute confiance.
+                    </p>
+                  </div>
+                </article>
+                <article
+                  class="flex flex-col gap-3 rounded-lg border border-gray-200/80 dark:border-gray-700/80 bg-background-light dark:bg-background-dark p-6"
+                  aria-labelledby="feature-developpement-personnel"
+                >
+                  <div class="text-primary">
+                    <span class="material-symbols-outlined !text-4xl" aria-hidden="true"
+                      >rocket_launch</span
+                    >
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h3 id="feature-developpement-personnel"
+                      class="text-[#222222] dark:text-white text-lg font-bold leading-tight"
+                    >
+                      D&eacute;veloppement Personnel
+                    </h3>
+                    <p
+                      class="text-[#222222]/80 dark:text-gray-400 text-sm font-normal leading-normal"
+                    >
+                      Chaque enfant est unique. Nous offrons un accompagnement
+                      personnalis&eacute; pour favoriser son autonomie et sa confiance
+                      en soi.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer
+          class="w-full flex justify-center bg-gray-100 dark:bg-background-dark border-t border-gray-200/80 dark:border-gray-700/80 mt-16"
+        >
+          <div class="w-full max-w-6xl px-4 sm:px-10 py-12">
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+            >
+              <div class="flex flex-col items-center md:items-start gap-4">
+                <div class="flex items-center gap-4">
+                  <div class="size-8 text-primary">
+                    <svg
+                      fill="none"
+                      viewbox="0 0 48 48"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h2
+                    class="text-lg font-bold tracking-[-0.015em] text-[#222222] dark:text-white"
+                  >
+                    LGC-jeunesse
+                  </h2>
+                </div>
+                <p class="text-sm text-[#222222]/80 dark:text-gray-400">
+                  Un espace d&eacute;di&eacute; &agrave; l'&eacute;panouissement des plus petits.
+                </p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <h3 class="font-bold text-[#222222] dark:text-white">
+                  Liens Rapides
+                </h3>
+                <nav class="flex flex-col gap-2" aria-label="Liens rapides">
+                  <a
+                    class="text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors"
+                    href="#"
+                    >Accueil</a
+                  >
+                  <a
+                    class="text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors"
+                    href="#"
+                    >&Agrave; Propos</a
+                  >
+                  <a
+                    class="text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors"
+                    href="#"
+                    >Services</a
+                  >
+                </nav>
+                <h3 class="font-bold text-[#222222] dark:text-white">
+                  Nous Contacter
+                </h3>
+                <address class="not-italic">
+                <ul class="flex flex-col gap-2">
+                  <li>
+                    <a
+                      class="flex items-center justify-center md:justify-start gap-2 text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors"
+                      href="mailto:contact@lgc-jeunesse.fr"
+                      ><span class="material-symbols-outlined !text-base" aria-hidden="true"
+                        >email</span
+                      >
+                      contact@lgc-jeunesse.fr</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="flex items-center justify-center md:justify-start gap-2 text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors"
+                      href="tel:+33123456789"
+                      ><span class="material-symbols-outlined !text-base" aria-hidden="true"
+                        >call</span
+                      >
+                      +33 1 23 45 67 89</a
+                    >
+                  </li>
+                </ul>
+                </address>
+              </div>
+            </div>
+            <div
+              class="mt-12 pt-8 border-t border-gray-200/80 dark:border-gray-700/80 text-center text-xs text-[#222222]/60 dark:text-gray-500"
+            >
+              <p>&copy; 2024 LGC-jeunesse. Tous droits r&eacute;serv&eacute;s.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
+
