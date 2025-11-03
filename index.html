@@ -13,7 +13,8 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#0b0b0b">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0b0b">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+ 
+    <script src="js/app.js" defer></script>
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
     <link
@@ -24,17 +25,16 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     >
-    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <style>
-      .material-symbols-outlined {
-        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-      }
+      .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; }
     </style>
+       
   </head>
   <body
     class="bg-background-light dark:bg-background-dark font-display text-[#222222] dark:text-gray-200"
   >
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:text-black focus:p-2 focus:rounded">Aller au contenu principal</a>
+  
     <div
       class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden"
     >
@@ -68,7 +68,13 @@
               </h2>
             </div>
             <div class="flex flex-1 justify-end gap-8 items-center">
-              <nav class="hidden md:flex items-center gap-9" aria-label="Navigation principale">
+              <button id="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" class="hamburger-btn lg:hidden" title="Menu">
+                <span class="material-symbols-outlined">menu</span>
+              </button>
+              <button id="theme-toggle" type="button" aria-label="Activer le mode sombre" class="theme-toggle" title="Basculer clair/sombre">
+                <span class="material-symbols-outlined">dark_mode</span>
+              </button>
+              <nav class="hidden lg:flex items-center gap-9" aria-label="Navigation principale">
                 <ul class="flex items-center gap-9">
                   <li>
                     <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
@@ -81,14 +87,21 @@
                   </li>
                 </ul>
               </nav>
-              <button type="button" aria-label="Nous contacter"
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
-              >
-                <span class="truncate">Contactez-nous</span>
+              <button type="button" aria-label="Nous contacter" class="btn-primary btn-contact">
+                <span>Contactez-nous</span>
               </button>
             </div>
           </div>
         </header>
+        <div id="mobile-backdrop" class="mobile-backdrop" hidden></div>
+        <nav id="mobile-menu" class="mobile-menu" aria-label="Navigation principale mobile">
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">&Agrave; Propos</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#contact">Contactez-nous</a></li>
+          </ul>
+        </nav>
         <main id="main-content" class="flex-1">
           <section
             class="flex flex-col items-center px-4 sm:px-10 py-10 sm:py-20"
@@ -97,7 +110,7 @@
             <div class="w-full max-w-6xl @container">
               <div class="@[480px]:p-4">
                 <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4 text-center"
+                  class="hero-box flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4 text-center"
                   aria-hidden="true"
                   style="
                     background-image: linear-gradient(
@@ -141,7 +154,7 @@
                 </h2>
               </div>
               <p
-                class="text-center text-base font-normal leading-relaxed text-[#222222] dark:text-gray-300 max-w-3xl mx-auto"
+                class="text-justify text-base font-normal leading-relaxed text-[#222222] dark:text-gray-300 max-w-3xl mx-auto"
               >
                 Chez LGC-jeunesse, nous nous engageons à offrir une approche
                 éducative unique, centrée sur le bien-être et l'éveil de chaque
@@ -211,13 +224,13 @@
                     <h3 id="feature-developpement-personnel"
                       class="text-[#222222] dark:text-white text-lg font-bold leading-tight"
                     >
-                      D&eacute;veloppement Personnel
+                      Développement Personnel
                     </h3>
                     <p
                       class="text-[#222222]/80 dark:text-gray-400 text-sm font-normal leading-normal"
                     >
                       Chaque enfant est unique. Nous offrons un accompagnement
-                      personnalis&eacute; pour favoriser son autonomie et sa confiance
+                      personnalisé pour favoriser son autonomie et sa confiance
                       en soi.
                     </p>
                   </div>
@@ -227,13 +240,13 @@
           </section>
         </main>
         <footer
-          class="w-full flex justify-center bg-gray-100 dark:bg-background-dark border-t border-gray-200/80 dark:border-gray-700/80 mt-16"
+          class="site-footer w-full flex justify-center bg-gray-100 dark:bg-background-dark border-t border-gray-200/80 dark:border-gray-700/80 mt-16"
         >
-          <div class="w-full max-w-6xl px-4 sm:px-10 py-12">
+          <div class="footer-inner w-full max-w-6xl px-4 sm:px-10 py-12">
             <div
-              class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+              class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center footer-grid"
             >
-              <div class="flex flex-col items-center md:items-start gap-4">
+              <div class="footer-col flex flex-col items-center md:items-start gap-4">
                 <div class="flex items-center gap-4">
                   <div class="size-8 text-primary">
                     <svg
@@ -255,57 +268,35 @@
                     LGC-jeunesse
                   </h2>
                 </div>
-                <p class="text-sm text-[#222222]/80 dark:text-gray-400">
+                <p class="text-sm text-[#222222]/80 dark:text-gray-400 footer-desc">
                   Un espace d&eacute;di&eacute; &agrave; l'&eacute;panouissement des plus petits.
                 </p>
               </div>
-              <div class="flex flex-col gap-3">
-                <h3 class="font-bold text-[#222222] dark:text-white">
-                  Liens Rapides
-                </h3>
+              <div class="footer-col flex flex-col gap-3">
+                <h3 class="footer-title font-bold text-[#222222] dark:text-white">Liens Rapides</h3>
                 <nav class="flex flex-col gap-2" aria-label="Liens rapides">
-                  <a
-                    class="text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors"
-                    href="#"
-                    >Accueil</a
-                  >
-                  <a
-                    class="text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors"
-                    href="#"
-                    >&Agrave; Propos</a
-                  >
-                  <a
-                    class="text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors"
-                    href="#"
-                    >Services</a
-                  >
+                  <a class="text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors" href="#">Accueil</a>
+                  <a class="text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors" href="#">&Agrave; Propos</a>
+                  <a class="text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors" href="#">Services</a>
                 </nav>
-                <h3 class="font-bold text-[#222222] dark:text-white">
-                  Nous Contacter
-                </h3>
+              </div>
+              <div class="footer-col flex flex-col gap-3">
+                <h3 class="footer-title font-bold text-[#222222] dark:text-white">Nous Contacter</h3>
                 <address class="not-italic">
-                <ul class="flex flex-col gap-2">
-                  <li>
-                    <a
-                      class="flex items-center justify-center md:justify-start gap-2 text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors"
-                      href="mailto:contact@lgc-jeunesse.fr"
-                      ><span class="material-symbols-outlined !text-base" aria-hidden="true"
-                        >email</span
-                      >
-                      contact@lgc-jeunesse.fr</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="flex items-center justify-center md:justify-start gap-2 text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors"
-                      href="tel:+33123456789"
-                      ><span class="material-symbols-outlined !text-base" aria-hidden="true"
-                        >call</span
-                      >
-                      +33 1 23 45 67 89</a
-                    >
-                  </li>
-                </ul>
+                  <ul class="flex flex-col gap-2">
+                    <li>
+                      <a class="flex items-center justify-center lg:justify-start gap-2 text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors" href="mailto:contact@lgc-jeunesse.fr">
+                        <span class="material-symbols-outlined !text-base" aria-hidden="true">email</span>
+                        contact@lgc-jeunesse.fr
+                      </a>
+                    </li>
+                    <li>
+                      <a class="flex items-center justify-center lg:justify-start gap-2 text-sm text-[#222222]/80 dark:text-gray-400 hover:text-primary transition-colors" href="tel:+33123456789">
+                        <span class="material-symbols-outlined !text-base" aria-hidden="true">call</span>
+                        +33 1 23 45 67 89
+                      </a>
+                    </li>
+                  </ul>
                 </address>
               </div>
             </div>
