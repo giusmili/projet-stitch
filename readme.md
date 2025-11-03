@@ -35,7 +35,7 @@ Il suffit d’ouvrir `code.html` dans votre navigateur. Aucun build ni dépendan
 
 ## 🖼️ Aperçu
 
-![Aperçu de la page](screen.png)
+![Aperçu de la page](./asset/screen.png)
 
 ---
 
