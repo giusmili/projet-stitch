@@ -40,3 +40,6 @@ Il suffit d’ouvrir `code.html` dans votre navigateur. Aucun build ni dépendan
 ---
 
 💡 Astuce: pour activer le mode sombre, ajoutez la classe `dark` sur l’élément `<html>`.
+
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
