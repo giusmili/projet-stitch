@@ -11,7 +11,7 @@
   const doc = document;
   const root = doc.documentElement;
 
-document.addEventListener('DOMContentLoaded', (e) => {
+
 
     let user = {
     el: document.querySelector('#date'),
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
   user.getDate(); // on exécute la méthode (PAS besoin de console.log ici)
   console.warn(user.el);
 
-});
+
 
 
 
