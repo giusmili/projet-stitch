@@ -1,3 +1,6 @@
+
+
+
 (() => {
   'use strict';
 
@@ -8,6 +11,32 @@
   const doc = document;
   const root = doc.documentElement;
 
+document.addEventListener('DOMContentLoaded', (e) => {
+
+    let user = {
+    el: document.querySelector('#date'),
+    date: new Date(),
+    getDate() {
+      if (this.el) {
+        this.el.innerText += ` ${this.date.getFullYear()}`;
+      } 
+      else {
+        console.error('Élément footer p introuvable');
+      }
+    }
+  };
+
+  user.getDate(); // on exécute la méthode (PAS besoin de console.log ici)
+  console.warn(user.el);
+
+});
+
+
+
+/* 
+  console.warn(user.getDate());
+  el.textContent += footer_date;
+ */
   const getSaved = () => {
     try { return localStorage.getItem(KEY); } catch { return null; }
   };
@@ -139,11 +168,13 @@
   });
      (()=>{
         try {
-          var saved = localStorage.getItem('theme');
-          var theme = saved || 'light'; // défaut: clair
-          var d = document.documentElement;
+          let saved = localStorage.getItem('theme');
+          let theme = saved || 'light'; // défaut: clair
+          let d = document.documentElement;
           if (theme === 'dark') d.classList.add('dark'); else d.classList.remove('dark');
         } catch (e) { /* ignore */ }
       })();
+
+    
    
 })();
